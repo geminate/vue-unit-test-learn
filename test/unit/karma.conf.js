@@ -6,7 +6,7 @@ module.exports = function (config) {
         browsers: ['ChromeHeadless'],
 
         // 测试框架
-        frameworks: ['mocha'],
+        frameworks: ['mocha', 'chai'],
 
         // 测试报告
         reporters: ['progress'],
@@ -30,7 +30,8 @@ module.exports = function (config) {
             'karma-chrome-launcher',
             'karma-mocha',
             'karma-sourcemap-loader',
-            'karma-webpack'
+            'karma-webpack',
+            'karma-chai'
         ]
     })
 };
