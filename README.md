@@ -1,6 +1,6 @@
 # vue-unit-test-learn
 
-> A Vue.js project
+> A project for learning unit test in vue.js
 
 ## Build Setup
 
@@ -8,14 +8,16 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# run project
+npm run start
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# run test
+npm run test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## dependencies
+- [Mocha](https://mochajs.org/) - 测试框架(Test Framework)
+- [Karma](http://karma-runner.github.io) - 浏览器测试环境(Test environment)
+- [Chai](https://www.chaijs.com/) - 断言库(assertion library)
+- [Vue-Test-Utils](https://vue-test-utils.vuejs.org) - Vue 测试公用库(Vue Test Utils is the official unit testing utility library for Vue.js)
+- [Sinon](https://github.com/jekyll/jekyll) - 实现测试替代(Standalone test spies, stubs and mocks for JavaScript)
