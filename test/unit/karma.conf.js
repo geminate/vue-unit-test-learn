@@ -3,13 +3,23 @@ const webpackConfig = require('../../build/webpack.base.conf');
 module.exports = function (config) {
     config.set({
         // 浏览器
-        browsers: ['ChromeHeadless'],
+        browsers: ['Chrome'],
 
         // 测试框架
         frameworks: ['mocha', 'sinon-chai'],
 
         // 测试报告
-        reporters: ['progress'],
+        reporters: ['spec', 'coverage'],
+
+        // coverage 测试报告 配置
+        coverageReporter: {
+            dir: './coverage',
+            reporters: [
+                {type: 'lcov', subdir: '.'},
+                {type: 'text-summary'}
+            ],
+            includeAllSources: true
+        },
 
         // 需要引入的测试文件和被测试文件
         files: ['./index.js'],
@@ -31,7 +41,9 @@ module.exports = function (config) {
             'karma-mocha',
             'karma-sourcemap-loader',
             'karma-webpack',
-            'karma-sinon-chai'
+            'karma-sinon-chai',
+            'karma-spec-reporter',
+            'karma-coverage'
         ]
     })
 };
